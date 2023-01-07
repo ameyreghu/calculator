@@ -32,14 +32,19 @@ class SimpleCalculatorProvider with ChangeNotifier {
     notifyListeners();
   }
 
-  clear(String text) {
-    if (text == 'AC') {
-      _input = '';
-      _result = '';
+  clear() {
+    if (_input.isEmpty) {
+      return;
     } else {
       _input = _input.substring(0, _input.length - 1);
     }
 
+    notifyListeners();
+  }
+
+  clearAll() {
+    _input = '';
+    _result = '';
     notifyListeners();
   }
 

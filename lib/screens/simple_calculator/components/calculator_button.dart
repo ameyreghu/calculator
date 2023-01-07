@@ -85,7 +85,9 @@ class ClearButton extends StatelessWidget {
         text: text,
         color: AppColors.fnButtonColor,
         textColor: AppColors.fnButtonTextColor,
-        onTap: () => context.read<SimpleCalculatorProvider>().clear(text));
+        onTap: () {
+         text=='AC'?context.read<SimpleCalculatorProvider>().clearAll() :context.read<SimpleCalculatorProvider>().clear();
+        });
   }
 }
 
