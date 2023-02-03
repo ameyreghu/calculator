@@ -14,66 +14,69 @@ class SimpleCalculator extends StatelessWidget {
         appBar: AppBar(
           backgroundColor: Colors.transparent,
         ),
-        body: Column(
-          children: [
-            const Flexible(flex: 2, child: Display()),
-            Expanded(
-                flex: 7,
-                child: Column(
-                  children: [
-                    Flexible(
-                      child: Row(
-                        children: const [
-                          ClearButton('AC'),
-                          ClearButton('C'),
-                          NumberButton('^2'),
-                          OperatorButton('÷'),
-                        ],
+        body: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 30.w, vertical: 20.h),
+          child: Column(
+            children: [
+              const Flexible(flex: 2, child: Display()),
+              Expanded(
+                  flex: 7,
+                  child: Column(
+                    children: [
+                      Flexible(
+                        child: Row(
+                          children: const [
+                            ClearButton('AC'),
+                            ClearButton('C'),
+                            NumberButton('^2'),
+                            OperatorButton('÷'),
+                          ],
+                        ),
                       ),
-                    ),
-                    Flexible(
-                      child: Row(
-                        children: const [
-                          NumberButton('7'),
-                          NumberButton('8'),
-                          NumberButton('9'),
-                          OperatorButton('X'),
-                        ],
+                      Flexible(
+                        child: Row(
+                          children: const [
+                            NumberButton('7'),
+                            NumberButton('8'),
+                            NumberButton('9'),
+                            OperatorButton('X'),
+                          ],
+                        ),
                       ),
-                    ),
-                    Flexible(
-                      child: Row(
-                        children: const [
-                          NumberButton('4'),
-                          NumberButton('5'),
-                          NumberButton('6'),
-                          OperatorButton('-'),
-                        ],
+                      Flexible(
+                        child: Row(
+                          children: const [
+                            NumberButton('4'),
+                            NumberButton('5'),
+                            NumberButton('6'),
+                            OperatorButton('-'),
+                          ],
+                        ),
                       ),
-                    ),
-                    Flexible(
-                      child: Row(
-                        children: const [
-                          NumberButton('1'),
-                          NumberButton('2'),
-                          NumberButton('3'),
-                          OperatorButton('+'),
-                        ],
+                      Flexible(
+                        child: Row(
+                          children: const [
+                            NumberButton('1'),
+                            NumberButton('2'),
+                            NumberButton('3'),
+                            OperatorButton('+'),
+                          ],
+                        ),
                       ),
-                    ),
-                    Flexible(
-                      child: Row(
-                        children: const [
-                          NumberButton('0'),
-                          NumberButton('.'),
-                          NumberButton('^'),
-                          EqualsButton('=')
-                        ],
+                      Flexible(
+                        child: Row(
+                          children: const [
+                            NumberButton('0'),
+                            NumberButton('.'),
+                            NumberButton('^'),
+                            EqualsButton('=')
+                          ],
+                        ),
                       ),
-                    ),
-                  ],
-                )),
-          ],
+                    ],
+                  )),
+            ],
+          ),
         ));
   }
 }

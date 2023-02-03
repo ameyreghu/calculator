@@ -21,7 +21,7 @@ class CalculatorButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Flexible(
       flex: 1,
-      child: InkWell(
+      child: GestureDetector(
         onTap: () {
           HapticFeedback.lightImpact();
           onTap();
@@ -86,7 +86,9 @@ class ClearButton extends StatelessWidget {
         color: AppColors.fnButtonColor,
         textColor: AppColors.fnButtonTextColor,
         onTap: () {
-         text=='AC'?context.read<SimpleCalculatorProvider>().clearAll() :context.read<SimpleCalculatorProvider>().clear();
+          text == 'AC'
+              ? context.read<SimpleCalculatorProvider>().clearAll()
+              : context.read<SimpleCalculatorProvider>().clear();
         });
   }
 }
